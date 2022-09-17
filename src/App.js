@@ -2,7 +2,7 @@
 function App() {
   return (
     <div>
-      <div></div>
+      <div>Saya Faqih Arifin</div>
     </div>
   );
 }
