@@ -25,10 +25,10 @@ export default function MainPage () {
                     <CardSummary image={confirmed} title="Total Confirmed" data={JSON.stringify(data.confirmed.value) || ""} />
                 </div>
                 <div className="col-4">
-                    <CardSummary image={recovered} title="Total Recovered" data="1.000.000" />
+                    <CardSummary image={recovered} title="Total Recovered" data={JSON.stringify(data.recovered.value) || ""} />
                 </div>
                 <div className="col-4">
-                    <CardSummary image={deaths} title="Total Deaths" data="1.000.000" />
+                    <CardSummary image={deaths} title="Total Deaths" data={JSON.stringify(data.deaths.value) || ""} />
                 </div>
             </div>
         </div>
