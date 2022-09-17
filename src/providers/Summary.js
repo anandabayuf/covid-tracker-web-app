@@ -4,7 +4,6 @@ const getSummary = async () => {
     try{
         const response = await fetch(BASE_URL);
         const responseJson = await response.json();
-
         return responseJson;
     }
     catch (error) {

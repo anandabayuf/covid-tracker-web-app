@@ -11,7 +11,7 @@ export default function CardSummary(props) {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title">{props.title}</h5>
+                        <h5 className="card-title">{props.title || ""}</h5>
                         <h3 className="card-text text-end">{props.data}</h3>
                     </div>
                 </div>
