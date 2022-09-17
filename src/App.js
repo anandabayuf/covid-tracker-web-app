@@ -1,9 +1,11 @@
+import MainPage from "./pages/Main-Page";
 
 function App() {
   return (
     <div>
-      <div>Saya Faqih Arifin</div>
+      <MainPage />
     </div>
+
   );
 }
 
