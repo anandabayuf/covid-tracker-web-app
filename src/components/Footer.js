@@ -1,15 +1,13 @@
 import { HeartFill } from "react-bootstrap-icons";
+import { textPrimary, backgroundColor } from "../utils/Color-Pallete";
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white text-center text-lg-start">
+    <footer>
       <div
-        className="text-center p-3"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+        className="text-center p-3 shadow-lg"
+        style={{backgroundColor: backgroundColor, color: textPrimary  }}
       >
-        © 2021 Copyright:
-        <a className="text-white">
-          Made with <HeartFill /> by Team 2 - Juara Coding
-        </a>
+        © 2022 Copyright: Made with <HeartFill color={textPrimary}/> by Team 2 - Juara Coding
       </div>
     </footer>
   );

@@ -2,7 +2,7 @@ import {textPrimary } from "../utils/Color-Pallete";
 
 export default function CardSummary(props) {
     const cardStyle = {
-        maxWidth: "350px",
+        width: "350px",
         border: "none",
         padding: "10px",
         borderRadius: "20px",

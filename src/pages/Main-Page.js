@@ -12,6 +12,7 @@ import {
 import { MDBIcon } from "mdb-react-ui-kit";
 import { getAllCountries } from "../providers/Country";
 import Footer from "../components/Footer";
+import DetailSection from "../components/Main-Page/Detail-Section";
 
 export default function MainPage() {
   const [summary, setSummary] = useState({});
@@ -143,63 +144,8 @@ export default function MainPage() {
             Last Update: {new Date(summaryId.lastUpdate).toLocaleString()}
           </div>
         </div>
-        <div>
-          <h3 className="mb-3" style={{ color: textPrimary }}>
-            Details
-          </h3>
-          <h5 className="mb-3" style={{ color: textPrimary }}>
-            Pilih Negara untuk dilihat detailnya
-          </h5>
-          <select
-            className="form-select mb-3 shadow"
-            onChange={handleChange}
-            style={{ borderRadius: "10px" }}
-          >
-            <option value="">Select Countries</option>
-            {countries.map((country, index) => {
-              return (
-                <option value={country.iso3} key={index}>
-                  {country.name}
-                </option>
-              );
-            })}
-          </select>
-          {summaryCountry === null ? (
-            <div></div>
-          ) : (
-            <div>
-              <div className="row justify-content-center">
-                <div className="col-auto">
-                  <CardSummary
-                    image={confirmed}
-                    title="Total Confirmed"
-                    data={JSON.stringify(summaryCountry.confirmed)}
-                  />
-                </div>
-                <div className="col-auto">
-                  <CardSummary
-                    image={recovered}
-                    title="Total Recovered"
-                    data={JSON.stringify(summaryCountry.recovered)}
-                  />
-                </div>
-                <div className="col-auto">
-                  <CardSummary
-                    image={deaths}
-                    title="Total Deaths"
-                    data={JSON.stringify(summaryCountry.deaths)}
-                  />
-                </div>
-              </div>
-              <div className="text-end text-muted mt-1">
-                Last Update:{" "}
-                {new Date(summaryCountry.lastUpdate).toLocaleString()}
-              </div>
-            </div>
-          )}
-        </div>
+        <DetailSection countries={countries} summaryCountry={summaryCountry} handleChange={handleChange} />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }
