@@ -1,4 +1,4 @@
-import {textPrimary } from "../utils/Color-Pallete";
+import { textPrimary } from "../../utils/Color-Pallete";
 
 export default function CardSummary(props) {
     const cardStyle = {

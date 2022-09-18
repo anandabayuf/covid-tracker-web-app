@@ -1,5 +1,5 @@
 import { HeartFill } from "react-bootstrap-icons";
-import { textPrimary, backgroundColor, textSecondary } from "../utils/Color-Pallete";
+import { textPrimary, backgroundColor } from "../utils/Color-Pallete";
 export default function Footer() {
   return (
     <footer>

@@ -1,8 +1,9 @@
 import { textPrimary, textSecondary } from "../../utils/Color-Pallete"
-import CardSummary from "../Card-Summary"
+import CardSummary from "./Card-Summary"
 import confirmed from "../../assets/icons/confirmed.png"
 import deaths from "../../assets/icons/deaths.png"
 import recovered from "../../assets/icons/recovered.png"
+import Loader from "../Loader"
 export default function DetailSection(props){
     return (
         <div className="pb-5">
@@ -21,6 +22,9 @@ export default function DetailSection(props){
             {
                 props.country === "" || props.summaryCountry === null ?
                 <div></div>
+                :
+                props.isLoading ?
+                <Loader />
                 :
                 <div>
                     <div className="row justify-content-center">
