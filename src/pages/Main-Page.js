@@ -66,11 +66,12 @@ export default function MainPage() {
         setCountries(response.countries);
     };
 
+    
     useEffect(() => {
         getSummary();
         getSummaryIndonesia();
         getCountries();
-    }, []);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     const getSummaryCountry = async (country) => {
         setIsLoading(true)

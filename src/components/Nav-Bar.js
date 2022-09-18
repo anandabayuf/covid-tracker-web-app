@@ -1,5 +1,5 @@
 import covidtracklogo from "../assets/icons/covid-tracker-logo.png"
-import { backgroundColor, textPrimary, textSecondary } from "../utils/Color-Pallete"
+import { backgroundColor, textSecondary } from "../utils/Color-Pallete"
 import { Link } from "react-router-dom"
 
 export default function NavBar(){
