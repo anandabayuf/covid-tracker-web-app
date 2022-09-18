@@ -1,14 +1,14 @@
-import { textPrimary } from "../../utils/Color-Pallete"
+import { textPrimary, textSecondary } from "../../utils/Color-Pallete"
 import CardSummary from "../Card-Summary"
 import confirmed from "../../assets/icons/confirmed.png"
 import deaths from "../../assets/icons/deaths.png"
 import recovered from "../../assets/icons/recovered.png"
 export default function DetailSection(props){
     return (
-        <div>
+        <div className="pb-5">
             <h3 className="mb-3" style={{color: textPrimary}}>Details</h3>
             <h5 className="mb-3" style={{color: textPrimary}}>Select Country to see details</h5>
-            <select className="form-select mb-5 shadow" onChange={props.handleChange} style={{borderRadius: "10px"}}>
+            <select className="form-select mb-5 shadow" onChange={props.handleChange} style={{borderRadius: "10px", color: textSecondary, border: "none"}}>
                 <option value="">Select Countries</option>
                 {
                     props.countries.map((country, index) => {
@@ -19,7 +19,7 @@ export default function DetailSection(props){
                 }
             </select>
             {
-                props.summaryCountry === null ?
+                props.country === "" || props.summaryCountry === null ?
                 <div></div>
                 :
                 <div>

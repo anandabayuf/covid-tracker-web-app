@@ -57,6 +57,7 @@ export default function MainPage() {
 
   const getSummaryCountry = async (country) => {
     const response = await getSummaryByCountry(country);
+    console.log(response)
     setSummaryCountry({
       ...summaryCountry,
       confirmed: response.confirmed.value,
@@ -144,7 +145,7 @@ export default function MainPage() {
             Last Update: {new Date(summaryId.lastUpdate).toLocaleString()}
           </div>
         </div>
-        <DetailSection countries={countries} summaryCountry={summaryCountry} handleChange={handleChange} />
+        <DetailSection countries={countries} summaryCountry={summaryCountry} country={country} handleChange={handleChange} />
       </div>
     </div>
   );
