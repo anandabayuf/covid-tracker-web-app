@@ -10,8 +10,9 @@ export default function MainPage () {
     
     const getData = async () => {
         const response = await getSummary();
-        console.log(response)
-        setData(response)
+        setData({
+            confirmed: response.confirmed.value,
+        })
     }
 
     useEffect(() => {
@@ -22,7 +23,7 @@ export default function MainPage () {
         <div className="container">
             <div className="row">
                 <div className="col-4">
-                    <CardSummary image={confirmed} title="Total Confirmed" data={JSON.stringify(data.confirmed.value) || ""} />
+                    <CardSummary image={confirmed} title="Total Confirmed" data={JSON.stringify(data.confirmed)} />
                 </div>
                 <div className="col-4">
                     <CardSummary image={recovered} title="Total Recovered" data={JSON.stringify(data.recovered.value) || ""} />
