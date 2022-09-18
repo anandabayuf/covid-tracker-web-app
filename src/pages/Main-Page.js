@@ -7,11 +7,9 @@ import { getAllSummary, getSummaryByCountry } from "../providers/Summary";
 import {
   backgroundColor,
   textPrimary,
-  textSecondary,
 } from "../utils/Color-Pallete";
 import { MDBIcon } from "mdb-react-ui-kit";
 import { getAllCountries } from "../providers/Country";
-import Footer from "../components/Footer";
 import DetailSection from "../components/Main-Page/Detail-Section";
 
 export default function MainPage() {
@@ -107,7 +105,7 @@ export default function MainPage() {
             </div>
           </div>
           <div className="text-end text-muted mt-1">
-            Last Update: {new Date(summary.lastUpdate).toLocaleString()}
+            Last Update: {new Date(summary.lastUpdate).toLocaleString('id')}
           </div>
         </div>
         <div className="mb-5">
@@ -142,7 +140,7 @@ export default function MainPage() {
             </div>
           </div>
           <div className="text-end text-muted mt-1">
-            Last Update: {new Date(summaryId.lastUpdate).toLocaleString()}
+            Last Update: {new Date(summaryId.lastUpdate).toLocaleString('id')}
           </div>
         </div>
         <DetailSection countries={countries} summaryCountry={summaryCountry} country={country} handleChange={handleChange} />
