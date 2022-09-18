@@ -7,7 +7,7 @@ export default function CardSummary(props) {
         <div className="card mb-3 shadow" style={cardStyle}>
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src={props.image} className="img-fluid rounded-start" alt="..."/>
+                    <img src={props.image} className="img-fluid rounded-start" alt={props.image}/>
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
