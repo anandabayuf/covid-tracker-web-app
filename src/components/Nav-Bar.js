@@ -5,9 +5,9 @@ export default function NavBar(){
     return (
         <nav className="navbar navbar-expand-lg navbar-light shadow fixed-top" style={{backgroundColor: backgroundColor, borderBottomRightRadius: "10px", borderBottomLeftRadius: "10px" }}>
             <div className="container">
-                <a class="navbar-brand" href="/">
+                <a className="navbar-brand" href="/">
                     <span>
-                        <img src={covidtracklogo} width="32" class="d-inline-block align-top" alt="" />
+                        <img src={covidtracklogo} width="32" className="d-inline-block align-top" alt="" />
                         <span style={{color: textSecondary}}>  Covid Tracker</span>
                     </span>
                 </a>
