@@ -1,13 +1,9 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import MainPage from "./pages/Main-Page";
 import NavBar from "./components/Nav-Bar";
+import Footer from "./components/Footer";
 
-function App(){
+function App() {
   return (
     <BrowserRouter>
       <NavBar />
@@ -18,9 +14,9 @@ function App(){
         </Route>
         <Route path="*" element={<Navigate to={"/"} />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;
-
