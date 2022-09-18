@@ -1,6 +1,25 @@
+import { otherColor, textPrimary, textSecondary } from "../utils/Color-Pallete";
+
 export default function CardSummary(props) {
     const cardStyle = {
-        maxWidth: "300px"
+        maxWidth: "310px",
+        border: "none",
+        padding: "10px",
+        borderRadius: "20px",
+        backgroundColor: otherColor
+    }
+
+    const cardTitleStyle = {
+        color: textPrimary
+    }
+
+    const cardTextStyle = {
+        color: textSecondary,
+        fontWeight: "bold"
+    }
+
+    const numberWithCommas = (x) => {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     }
 
     return (
@@ -11,8 +30,8 @@ export default function CardSummary(props) {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title">{props.title || ""}</h5>
-                        <h3 className="card-text text-end">{props.data}</h3>
+                        <h5 className="card-title" style={cardTitleStyle}>{props.title || ""}</h5>
+                        <h3 className="card-text text-end" style={cardTextStyle}>{numberWithCommas(props.data || "")}</h3>
                     </div>
                 </div>
             </div>
