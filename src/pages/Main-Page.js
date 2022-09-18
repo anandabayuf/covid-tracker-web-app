@@ -12,6 +12,8 @@ export default function MainPage () {
         const response = await getSummary();
         setData({
             confirmed: response.confirmed.value,
+            recovered: response.recovered.value,
+            deaths: response.deaths.value
         })
     }
 
@@ -26,10 +28,10 @@ export default function MainPage () {
                     <CardSummary image={confirmed} title="Total Confirmed" data={JSON.stringify(data.confirmed)} />
                 </div>
                 <div className="col-4">
-                    <CardSummary image={recovered} title="Total Recovered" data={JSON.stringify(data.recovered.value) || ""} />
+                    <CardSummary image={recovered} title="Total Recovered" data={JSON.stringify(data.recovered)} />
                 </div>
                 <div className="col-4">
-                    <CardSummary image={deaths} title="Total Deaths" data={JSON.stringify(data.deaths.value) || ""} />
+                    <CardSummary image={deaths} title="Total Deaths" data={JSON.stringify(data.deaths)} />
                 </div>
             </div>
         </div>
