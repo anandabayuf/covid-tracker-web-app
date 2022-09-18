@@ -1,6 +1,6 @@
 import { BASE_URL } from "./Helper"
 
-const getSummary = async () => {
+const getAllSummary = async () => {
     try{
         const response = await fetch(BASE_URL);
         const responseJson = await response.json();
@@ -11,6 +11,18 @@ const getSummary = async () => {
     }
 }
 
+const getSummaryByCountry = async (country) => {
+    try{
+        const response = await fetch(`${BASE_URL}/countries/${country}`);
+        const responseJson = await response.json();
+        return responseJson;
+    }
+    catch (error) {
+        alert(error)
+    }
+}
+
 export {
-    getSummary
+    getAllSummary,
+    getSummaryByCountry
 }

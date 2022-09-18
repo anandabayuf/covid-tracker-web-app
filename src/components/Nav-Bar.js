@@ -1,5 +1,5 @@
 import covidtracklogo from "../assets/icons/covid-tracker-logo.png"
-import { backgroundColor, textSecondary } from "../utils/Color-Pallete"
+import { backgroundColor, textPrimary, textSecondary } from "../utils/Color-Pallete"
 
 export default function NavBar(){
     return (
@@ -16,7 +16,8 @@ export default function NavBar(){
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                    <a className="nav-item nav-link" href="/"><span style={{color: textSecondary}}>Home</span></a>
+                        <a className="nav-item nav-link" href="/"><span style={{color: textSecondary}}>Home</span></a>
+                        <a className="nav-item nav-link" href="/"><span style={{color: textSecondary}}>About</span></a>
                     </div>
                 </div>
             </div>

@@ -1,25 +1,28 @@
-import MainPage from "./pages/Main-Page";
-import { render } from "react-dom";
-import App from './App';
-//import NavBar from "./components/Nav-Bar";
-//import ReactDOM from "react-dom";
 import {
   BrowserRouter,
   Routes,
   Route,
+  Navigate,
 } from "react-router-dom";
+import MainPage from "./pages/Main-Page";
+import NavBar from "./components/Nav-Bar";
 
-render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<MainPage />}>
-        {/* Tolong review mas. <Route index element={<About />}>
-          </Route>*/}
-      </Route>
-    </Routes>
-  </BrowserRouter>,
-  document.getElementById("root")
-);
+
+
+function App(){
+  return (
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<MainPage />}>
+          {/* Tolong review mas. <Route index element={<About />}>
+            </Route>*/}
+        </Route>
+        <Route path="*" element={<Navigate to={"/"} />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
 
 export default App;
 
