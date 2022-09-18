@@ -1,23 +1,26 @@
-import gCovid from '../assets/icons/covid-tracker-logo.png'
-export default function Navigasi(props){
-  return(
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary px-5 mb-5">
-      <a className="navbar-brand mx-3" href="#">
-        <img src={gCovid} alt="..." height="36"/>
-      </a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse " id="navbarNav">
-        <ul className="navbar-nav">
-          <li className="nav-item active">
-            <h4><a className="nav-link" href="#">Beranda</a></h4>
-          </li>
-          <li className="nav-item">
-          <h4><a className="nav-link" href="#">Tentang</a></h4>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  )
+import covidtracklogo from "../assets/icons/covid-tracker-logo.png"
+import { backgroundColor, textPrimary, textSecondary } from "../utils/Color-Pallete"
+
+export default function NavBar(){
+    return (
+        <nav className="navbar navbar-expand-lg navbar-light shadow fixed-top" style={{backgroundColor: backgroundColor, borderBottomRightRadius: "10px", borderBottomLeftRadius: "10px" }}>
+            <div className="container">
+                <a className="navbar-brand" href="/">
+                    <span>
+                        <img src={covidtracklogo} width="32" className="d-inline-block align-top" alt="" />
+                        <span style={{color: textSecondary}}>  Covid Tracker</span>
+                    </span>
+                </a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div className="navbar-nav">
+                        <a className="nav-item nav-link" href="/"><span style={{color: textSecondary}}>Home</span></a>
+                        <a className="nav-item nav-link" href="/"><span style={{color: textSecondary}}>About</span></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    )
 }

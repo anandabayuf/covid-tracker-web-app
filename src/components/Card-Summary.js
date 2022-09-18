@@ -1,12 +1,12 @@
-import { otherColor, textPrimary, textSecondary } from "../utils/Color-Pallete";
+import {textPrimary } from "../utils/Color-Pallete";
 
 export default function CardSummary(props) {
     const cardStyle = {
-        maxWidth: "310px",
+        maxWidth: "350px",
         border: "none",
         padding: "10px",
         borderRadius: "20px",
-        backgroundColor: otherColor
+        backgroundColor: props.title === "Total Confirmed" ? "#ffc107" : props.title === "Total Recovered" ?  "#198754" : "#dc3545"
     }
 
     const cardTitleStyle = {
@@ -14,7 +14,7 @@ export default function CardSummary(props) {
     }
 
     const cardTextStyle = {
-        color: textSecondary,
+        color: textPrimary,
         fontWeight: "bold"
     }
 
