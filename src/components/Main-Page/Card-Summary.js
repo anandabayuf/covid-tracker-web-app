@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { textPrimary } from "../../utils/Color-Pallete";
 
 export default function CardSummary(props) {

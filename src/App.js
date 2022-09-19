@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import MainPage from "./pages/Main-Page";
 import NavBar from "./components/Nav-Bar";

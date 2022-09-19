@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { textSecondary } from "../utils/Color-Pallete"
 
 export default function Loader(){

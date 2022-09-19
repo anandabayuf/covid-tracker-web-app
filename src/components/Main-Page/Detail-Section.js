@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { textPrimary, textSecondary } from "../../utils/Color-Pallete"
 import CardSummary from "./Card-Summary"
 import confirmed from "../../assets/icons/confirmed.png"

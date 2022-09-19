@@ -1,3 +1,4 @@
+import * as React from 'react';
 import covidtracklogo from "../assets/icons/covid-tracker-logo.png"
 import { backgroundColor, textSecondary } from "../utils/Color-Pallete"
 import { Link } from "react-router-dom"

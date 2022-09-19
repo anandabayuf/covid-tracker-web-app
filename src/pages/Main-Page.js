@@ -1,3 +1,4 @@
+import * as React from 'react';
 import CardSummary from "../components/Main-Page/Card-Summary";
 import confirmed from "../assets/icons/confirmed.png";
 import deaths from "../assets/icons/deaths.png";
