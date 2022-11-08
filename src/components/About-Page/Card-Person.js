@@ -1,4 +1,3 @@
-import * as React from 'react';
 import {Envelope, Whatsapp} from "react-bootstrap-icons"
 import { textPrimary, otherColor } from "../../utils/Color-Pallete"
 

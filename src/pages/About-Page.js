@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { backgroundColor } from "../utils/Color-Pallete";
 import barkah from "../assets/images/barkah.jpg"
 import bayu from "../assets/images/bayu.jpg"
